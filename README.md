@@ -6,7 +6,7 @@
 
 Here add jitpack badge
 
-# CeribeLibName
+# Overflow Menu
 Here short description and screenshots/gifs
 
 # How to add to project

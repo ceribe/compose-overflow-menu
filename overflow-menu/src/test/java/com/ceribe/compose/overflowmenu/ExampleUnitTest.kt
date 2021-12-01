@@ -1,4 +1,4 @@
-package com.ceribe.compose.ceribelibname
+package com.ceribe.compose.overflowmenu
 
 import org.junit.Test
 

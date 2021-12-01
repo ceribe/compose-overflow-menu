@@ -17,6 +17,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "CeribeLibName"
+rootProject.name = "OverflowMenu"
 include ':sample'
-include ':ceribelibname'
+include ':overflow-menu'

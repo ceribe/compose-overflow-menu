@@ -20,7 +20,7 @@ afterEvaluate {
 
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.github.Ceribe'
-                artifactId = 'Compose-CeribeLibName'
+                artifactId = 'Compose-OverflowMenu'
                 version = "0.1"
 
                 afterEvaluate {
