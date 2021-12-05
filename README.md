@@ -51,6 +51,16 @@ OverflowMenu {
     }
 }
 ```
+### Possible icon parameters
+- onClick - Lambda called when icon is clicked
+- modifier - Will be applied to Icon or DropdownMenuItem
+- enabled - Will be applied to Icon or DropdownMenuItem
+- imageVector - Will be applied to Icon
+- label - Label used when this icon is hidden
+- contentDescription - Will be applied to Icon
+- tint - Will be applied to Icon
+
+
 For more in examples check [here](https://github.com/ceribe/compose-overflow-menu/blob/master/sample/src/main/java/com/ceribe/compose/sample/MainActivity.kt)
 
 # License
