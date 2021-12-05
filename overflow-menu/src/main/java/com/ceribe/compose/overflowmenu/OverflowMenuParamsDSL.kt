@@ -8,12 +8,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 
 @DslMarker
-annotation class OverflowMenuDSL
+internal annotation class OverflowMenuDSL
 
 @Composable
-fun OverflowMenu(block: OverflowMenuParamsBuilder.() -> Unit) {
+fun OverflowMenu(block: OverflowMenuParamsBuilder.() -> Unit) =
     OverflowMenu(OverflowMenuParamsBuilder().apply(block).build())
-}
+
 
 @OverflowMenuDSL
 class OverflowMenuParamsBuilder {
