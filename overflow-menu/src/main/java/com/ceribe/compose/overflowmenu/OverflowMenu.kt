@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import kotlin.math.min
 
 @Composable
-fun OverflowMenu(params: OverflowMenuParamsDTO) {
+internal fun OverflowMenu(params: OverflowMenuParamsDTO) {
     with(params) {
         val shownIcons = icons.subList(0, min(shownIconsCount, icons.size))
         val hiddenIcons =
