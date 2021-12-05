@@ -19,7 +19,7 @@ Add it in your root build.gradle at the end of repositories:
 ### Step 2. Add the dependency
 ```gradle
   dependencies {
-       implementation 'com.github.ceribe:compose-overflow-menu:1.0'
+       implementation 'com.github.ceribe:compose-overflow-menu:version'
   }
 ```
 
