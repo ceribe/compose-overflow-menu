@@ -52,7 +52,7 @@ OverflowMenu {
 }
 ```
 ### Possible icon parameters
-- onClick - Lambda called when icon is clicked
+- onClick - Lambda called when this icon is clicked
 - modifier - Will be applied to Icon or DropdownMenuItem
 - enabled - Will be applied to Icon or DropdownMenuItem
 - imageVector - Will be applied to Icon
