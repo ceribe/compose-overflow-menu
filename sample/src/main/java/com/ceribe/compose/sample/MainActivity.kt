@@ -28,9 +28,18 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Sample1()
-//                    Sample2()
-//                    Sample3()
+                    Scaffold(
+                        topBar = {
+                            TopAppBar(
+                                title = { Text("Title") },
+                                actions = {
+                                    Sample1()
+//                                    Sample2()
+//                                    Sample3()
+                                }
+                            )
+                        }
+                    ) {}
                 }
             }
         }
@@ -43,105 +52,78 @@ fun Context.toast(message: CharSequence) =
 @Composable
 fun Sample1() {
     val context = LocalContext.current
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Sample 1") },
-                actions = {
-                    OverflowMenu {
-                        shownIconsCount = 2
-                        icons {
-                            icon {
-                                imageVector = Icons.Filled.Edit
-                                onClick = { context.toast("First Icon Clicked") }
-                            }
-                            icon {
-                                imageVector = Icons.Filled.Delete
-                                onClick = { context.toast("Second Icon Clicked") }
-                            }
-                            icon {
-                                label = "Third Example"
-                                onClick = { context.toast("Third Icon Clicked") }
-                            }
-                        }
-                        defaults {
-                            tint = Color.Red
-                        }
-                        overflowIcon {
-                            tint = Color.Yellow
-                        }
-                    }
-                }
-            )
+    OverflowMenu {
+        shownIconsCount = 2
+        icons {
+            icon {
+                imageVector = Icons.Filled.Edit
+                onClick = { context.toast("First Icon Clicked") }
+            }
+            icon {
+                imageVector = Icons.Filled.Delete
+                onClick = { context.toast("Second Icon Clicked") }
+            }
+            icon {
+                label = "Third Example"
+                onClick = { context.toast("Third Icon Clicked") }
+            }
         }
-    ) {}
+        defaults {
+            tint = Color.Red
+        }
+        overflowIcon {
+            tint = Color.Yellow
+        }
+    }
 }
 
 @Composable
 fun Sample2() {
     var numberOfShownIcons by remember { mutableStateOf(3) }
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Sample 2") },
-                actions = {
-                    OverflowMenu {
-                        shownIconsCount = numberOfShownIcons
-                        icons {
-                            icon {
-                                onClick = { numberOfShownIcons = 3 }
-                                tint = Color.Green
-                                imageVector = Icons.Filled.Add
-                            }
-                            icon {
-                                imageVector = Icons.Filled.Settings
-                            }
-                            icon {
-                                onClick = { numberOfShownIcons = 1 }
-                                tint = Color.Red
-                                imageVector = Icons.Filled.Delete
-                            }
-                            icon {
-                                label = "Fourth Example"
-                            }
-                            icon {
-                                label = "Fifth Example"
-                            }
-                        }
-                        defaults {
-                            label = "Default Label"
-                        }
-                    }
-                }
-            )
+    OverflowMenu {
+        shownIconsCount = numberOfShownIcons
+        icons {
+            icon {
+                onClick = { numberOfShownIcons = 3 }
+                tint = Color.Green
+                imageVector = Icons.Filled.Add
+            }
+            icon {
+                imageVector = Icons.Filled.Settings
+            }
+            icon {
+                onClick = { numberOfShownIcons = 1 }
+                tint = Color.Red
+                imageVector = Icons.Filled.Delete
+            }
+            icon {
+                label = "Fourth Example"
+            }
+            icon {
+                label = "Fifth Example"
+            }
         }
-    ) {}
+        defaults {
+            label = "Default Label"
+        }
+    }
 }
 
 @Composable
 fun Sample3() {
     val context = LocalContext.current
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Sample 3") },
-                actions = {
-                    OverflowMenu {
-                        shownIconsCount = 1
-                        icons {
-                            icon {
-                                onClick = { context.toast("Clicked") }
-                                modifier = Modifier.rotate(30f)
-                                enabled = true
-                                imageVector = Icons.Filled.Favorite
-                                label = "Example label"
-                                contentDescription = "Sample Icon"
-                                tint = Color.Cyan
-                            }
-                        }
-                    }
-                }
-            )
+    OverflowMenu {
+        shownIconsCount = 1
+        icons {
+            icon {
+                onClick = { context.toast("Clicked") }
+                modifier = Modifier.rotate(30f)
+                enabled = true
+                imageVector = Icons.Filled.Favorite
+                label = "Example label"
+                contentDescription = "Sample Icon"
+                tint = Color.Cyan
+            }
         }
-    ) {}
+    }
 }
