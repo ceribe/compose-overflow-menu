@@ -61,7 +61,7 @@ OverflowMenu {
 - tint - Will be applied to Icon
 
 
-For more in examples check [here](https://github.com/ceribe/compose-overflow-menu/blob/master/sample/src/main/java/com/ceribe/compose/sample/MainActivity.kt)
+For more examples check [here](https://github.com/ceribe/compose-overflow-menu/blob/master/sample/src/main/java/com/ceribe/compose/sample/MainActivity.kt)
 
 # License
 ```
