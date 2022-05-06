@@ -13,7 +13,7 @@ internal fun OverflowMenu(params: OverflowMenuParamsDTO) {
     with(params) {
         val shownIcons = icons.subList(0, min(shownIconsCount, icons.size))
         val hiddenIcons =
-            if(shownIconsCount >= icons.size)
+            if (shownIconsCount >= icons.size)
                 listOf()
             else
                 icons.subList(shownIconsCount, icons.size)
@@ -30,7 +30,7 @@ internal fun OverflowMenu(params: OverflowMenuParamsDTO) {
                 )
             }
         }
-        if(hiddenIcons.isNotEmpty()) {
+        if (hiddenIcons.isNotEmpty()) {
             Box {
                 var showDropDown by remember { mutableStateOf(false) }
                 IconButton(
